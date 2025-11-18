@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/product-detail.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Mobile Menu Sidebar -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-header"></div>
+
+        <!-- Accordion Item 1: Men -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Men
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#men-tshirts">Perfumes</a>
+            <a href="#men-jeans">Perfume Oils</a>
+            <a href="#men-shirts">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Women -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Women
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#women-dresses">Perfumes</a>
+            <a href="#women-tops">Mists</a>
+            <a href="#women-jeans">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Sale -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Sale
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#sale-men">Men's Sale</a>
+            <a href="#sale-women">Women's Sale</a>
+            <a href="#sale-clearance">Clearance</a>
+            <a href="#sale-new">New Arrivals</a>
+          </div>
+        </div>
+        <!-- Accordion Item 4: Contact -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Contact
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="help_text">Need help?</p>
+            <div class="cont_info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+923331234567</p>
+            </div>
+            <div class="cont_info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@perfumesmists.pk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar_ftr">
+          <h4>Perfumes Mists</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-left">
+        <ul>
+          <li><a href="products.html">Men</a></li>
+          <li><a href="products.html">Women</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-center">
+        <a class="logo-link" href="home.html" aria-label="Go to home">
+          <span class="logo">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1>
+              Perfumes<br />
+              Mists
+            </h1>
+          </span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="cart-subtotal">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Overlay (for background dim) -->
+      <div id="cart-overlay" class="cart-overlay"></div>
+
+      <label for="menu-toggle" class="nav-overlay"></label>
+    </nav>
+
+    <div class="product-detail">
+      <div class="product-images">
+        <div class="main-image">
+          <img
+            id="main-image"
+            src="https://shop.alharamainperfumes.com/media/catalog/product/cache/7836f2f2fc7ebf447684856e0d3cb600/a/h/ahp1010_b_1_1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="thumbnail-container">
+          <img
+            class="thumb active"
+            onclick="changeImage(this)"
+            src="https://shop.alharamainperfumes.com/media/catalog/product/cache/7836f2f2fc7ebf447684856e0d3cb600/a/h/ahp1010_b_1_1.jpg"
+            alt=""
+          />
+          <img
+            class="thumb"
+            onclick="changeImage(this)"
+            src="https://shop.alharamainperfumes.com/media/catalog/product/cache/490c4e3bbae272be3ce2b30a9945698e/a/h/ahp1010_b_2.jpg"
+            alt=""
+          />
+          <img
+            class="thumb"
+            onclick="changeImage(this)"
+            src="https://shop.alharamainperfumes.com/media/catalog/product/cache/490c4e3bbae272be3ce2b30a9945698e/a/h/ahp1010_laventure_gold_100ml-01.jpg"
+            alt=""
+          />
+          <img
+            class="thumb"
+            onclick="changeImage(this)"
+            src="https://shop.alharamainperfumes.com/media/catalog/product/cache/490c4e3bbae272be3ce2b30a9945698e/a/h/ahp1010_laventure_gold-pyramid.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1 id="product-name">Haramain L'Aventure Gold, Eau De Parfum</h1>
+        <div class="delivery">
+          <i class="fa-solid fa-truck-fast"></i>
+          <p>Delivery Time 3-5 Days</p>
+        </div>
+        <div class="sale">
+          <h3 id="product-price">$54.42</h3>
+          <h3 id="product-price-sale">$40</h3>
+        </div>
+
+        <div class="size">
+          <p id="size-text">Size: <span id="selected-size">50ml</span></p>
+          <div class="size-options">
+            <div class="size-box active" data-size="50ml">50ml</div>
+            <div class="size-box" data-size="100ml">100ml</div>
+            <div class="size-box" data-size="200ml">200ml</div>
+          </div>
+        </div>
+
+        <!-- Quantity Selector -->
+        <div class="qty-cart">
+          <div class="quantity-container">
+            <button class="qty-btn qty-btn--minus" id="decrease">
+              &minus;
+            </button>
+            <input type="number" id="quantity" value="1" min="1" max="10" />
+            <button class="qty-btn qty-btn--plus" id="increase">&plus;</button>
+          </div>
+
+          <button
+            class="add-to-cart"
+            data-name="Haramain L'Aventure Gold, Eau De Parfum"
+            data-price="40"
+            data-image="https://shop.alharamainperfumes.com/media/catalog/product/cache/7836f2f2fc7ebf447684856e0d3cb600/a/h/ahp1010_b_1_1.jpg"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <!-- Accordion Section -->
+      <div class="accordion-container">
+        <div class="faq-item">
+          <button class="question">
+            Description
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              A scent that embodies passion and elegance in its finest form. It
+              opens with bright notes of orange blossom, pear, and vanilla,
+              unfolds into a heart of pink pepper, jasmine, and almond, and
+              settles into a warm, captivating base of cashmere wood, cedarwood,
+              and patchouli.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            How to Use?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              <strong>Spray on Pulse Points:</strong> Apply on wrists, neck,
+              behind ears, or inner elbows for a lasting fragrance. <br />
+              <strong>Avoid Rubbing:</strong> Let the scent settle naturally on
+              your skin. <br />
+              <strong>Layer for Longevity:</strong> For a stronger scent, apply
+              on moisturized skin or use a matching lotion.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            Shipping & Returns
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              Shipping calculated at checkout. <br />
+              <br />
+              <strong>Hassle-Free Returns & Exchanges</strong> <br />
+              <br />
+              If you're not satisfied, we offer a 20-day return and exchange
+              policy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="top-sellers">
+      <h2>Related Products</h2>
+
+      <div class="swiper top-sellers-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product3.png" alt="" />
+              <div class="product-info">
+                <h3>Paradox - 500ml</h3>
+                <button>+</button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product2.png" alt="" />
+              <div class="product-info">
+                <h3>Pink Floral - 500ml</h3>
+                <button>+</button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button>+</button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button>+</button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button>+</button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button>+</button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+        </div>
+        <div class="sellers-pagination swiper-pagination"></div>
+      </div>
+    </section>
+
+    <footer class="ftr">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <ul class="links">
+            <li><a href="products.html">Men</a></li>
+            <li><a href="products.html">Women</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="home.html">Best Selling</a></li>
+            <li><a href="home.html">Top Deals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Shipping Policy</a></li>
+            <li><a href="contact.html">Refund Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>NEWSLETTER SIGN UP</h4>
+          <p class="news">
+            Sign up for exclusive updates, new arrivals & insider only
+            discounts.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025, Perfumes Mists. All rights reserved.</p>
+    </footer>
+     <div class="bottom-tab">
+      <a href="home.html" class="tab-item">
+         <i class="fa-solid fa-house"></i>
+         <span>Home</span>
+      </a>
+      <a href="products.html" class="tab-item">
+          <i class="fa-solid fa-store"></i>
+         <span>Shop</span>
+      </a>
+      <a href="sale.html" class="tab-item">
+         <i class="fa-solid fa-tags"></i>
+         <span>Sale</span>
+      </a>
+      <label id="cart-toggle" class="tab-item">
+         <i class="fa-solid fa-cart-shopping"></i>
+         <span>Cart</span>
+      </label>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../assets/js/product-details.js"></script>
+    <script src="../assets/js/faq.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/cart.js"></script>
+  </body>
+</html>

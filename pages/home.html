@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfumes Mists</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/product-detail.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <p>FREE SHIPPING ON ORDERS ABOVE RS. 5000</p>
+    </div>
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Mobile Menu Sidebar -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-header"></div>
+
+        <!-- Accordion Item 1: Men -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Men
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#men-tshirts">Perfumes</a>
+            <a href="#men-jeans">Perfume Oils</a>
+            <a href="#men-shirts">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Women -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Women
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#women-dresses">Perfumes</a>
+            <a href="#women-tops">Mists</a>
+            <a href="#women-jeans">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Sale -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Sale
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#sale-men">Men's Sale</a>
+            <a href="#sale-women">Women's Sale</a>
+            <a href="#sale-clearance">Clearance</a>
+            <a href="#sale-new">New Arrivals</a>
+          </div>
+        </div>
+        <!-- Accordion Item 4: Contact -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Contact
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="help_text">Need help?</p>
+            <div class="cont_info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+923331234567</p>
+            </div>
+            <div class="cont_info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@perfumesmists.pk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar_ftr">
+          <h4>Perfumes Mists</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-left">
+        <ul>
+          <li><a href="products.html">Men</a></li>
+          <li><a href="products.html">Women</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-center">
+        <a class="logo-link" href="home.html" aria-label="Go to home">
+          <span class="logo">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1>
+              Perfumes<br />
+              Mists
+            </h1>
+          </span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="cart-subtotal">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Overlay (for background dim) -->
+      <div id="cart-overlay" class="cart-overlay"></div>
+
+      <label for="menu-toggle" class="nav-overlay"></label>
+    </nav>
+
+    <div class="categories-mobile">
+      <div class="cat-image">
+        <img
+          src="https://lattafapakistan.com/cdn/shop/files/Asad-61571296.png?v=1753974626"
+          alt=""
+        />
+        <h4>Men</h4>
+      </div>
+      <div class="cat-image">
+        <img
+          src="https://lattafapakistan.com/cdn/shop/files/Layaan-87724289.png?v=1762084826"
+          alt=""
+        />
+        <h4>Women</h4>
+      </div>
+      <div class="cat-image">
+        <img
+          src="https://lattafapakistan.com/cdn/shop/files/Stop-Wait-Go-for-Kids-64382767.png?v=1753977526"
+          alt=""
+        />
+        <h4>Kids</h4>
+      </div>
+      <div class="cat-image">
+        <img
+          src="https://lattafapakistan.com/cdn/shop/files/Pisa-75313938.jpg?v=1757177600"
+          alt=""
+        />
+        <h4>Sale</h4>
+      </div>
+    </div>
+
+    <section class="swiper hero-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div
+          class="swiper-slide"
+          style="--bg: linear-gradient(rgba(0, 130, 63, 1), rgba(0, 28, 14, 1))"
+        >
+          <div class="hero-content">
+            <span>MINT</span><span>MINT</span><span>MINT</span> <span>MINT</span
+            ><span>MINT</span><span>MINT</span> <span>MINT</span
+            ><span>MINT</span><span>MINT</span> <span>MINT</span
+            ><span>MINT</span><span>MINT</span>
+          </div>
+          <div class="leaves-image">
+            <img src="../assets/images/leaves.png" alt="Perfume Bottle" />
+          </div>
+          <div class="mint-image">
+            <img src="../assets/images/product1.png" alt="Perfume Bottle" />
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide"
+          style="
+            --bg: linear-gradient(
+              rgba(249, 174, 201, 1),
+              rgba(147, 103, 119, 1)
+            );
+          "
+        >
+          <div class="hero-content2">
+            <span>PINK</span><span>FLORAL</span> <span>PINK</span
+            ><span>FLORAL</span> <span>PINK</span><span>FLORAL</span>
+            <span>PINK</span><span>FLORAL</span>
+          </div>
+          <div class="pink-leaves-image">
+            <img src="../assets/images/pink-leaves.png" alt="Perfume Bottle" />
+          </div>
+          <div class="pink-image">
+            <img src="../assets/images/product2.png" alt="" />
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide"
+          style="
+            --bg: linear-gradient(rgba(80, 55, 62, 1), rgba(182, 125, 141, 1));
+          "
+        >
+          <div class="hero-content3">
+            <span>PARADOX</span>
+            <span>PARADOX</span>
+            <span>PARADOX</span>
+            <span>PARADOX</span>
+          </div>
+          <div class="brown-leaves-image1">
+            <img src="../assets/images/brown-leaves.png" alt="Perfume Bottle" />
+          </div>
+          <div class="brown-leaves-image2">
+            <img src="../assets/images/brown-leaves.png" alt="Perfume Bottle" />
+          </div>
+          <div class="brown-leaves-image3">
+            <img src="../assets/images/brown-leaves.png" alt="Perfume Bottle" />
+          </div>
+
+          <div class="brown-image">
+            <img src="../assets/images/product3.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-next swiper-button-next"></div>
+      <div class="hero-prev swiper-button-prev"></div>
+      <!-- <div class="hero-pagination swiper-pagination"></div> -->
+    </section>
+
+    <section class="top-sellers">
+      <h2>Top Sold</h2>
+
+      <div class="swiper top-sellers-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product3.png" alt="" />
+              <div class="product-info">
+                <h3>Paradox - 500ml</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Paradox - 500ml"
+                  data-price="15000.00"
+                  data-image="../assets/images/product3.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">Rs.15000.00</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product2.png" alt="" />
+              <div class="product-info">
+                <h3>Pink Floral - 500ml</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Pink Floral - 500ml"
+                  data-price="15000.00"
+                  data-image="../assets/images/product2.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">Rs.15000.00</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Mint - 500ml"
+                  data-price="15000.00"
+                  data-image="../assets/images/product1.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">Rs.15000.00</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Mint - 500ml"
+                  data-price="15000.00"
+                  data-image="../assets/images/product1.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">Rs.15000.00</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product1.png" alt="" />
+              <div class="product-info">
+                <h3>Mint - 500ml</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Mint - 500ml"
+                  data-price="15000.00"
+                  data-image="../assets/images/product1.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">Rs.15000.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="sellers-pagination swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="image-grid">
+      <div class="grid-item tall">
+        <img src="../assets/images/mont.png" alt="" />
+      </div>
+      <div class="grid-item wide">
+        <img src="../assets/images/SWYI.jpg" alt="Brand 2" />
+      </div>
+      <div class="grid-item">
+        <img src="../assets/images/homme.png" alt="Brand 3" />
+      </div>
+      <div class="grid-item wide">
+        <img src="../assets/images/noire.png" alt="Brand 4" />
+      </div>
+      <div class="grid-item tall">
+        <img src="../assets/images/nrd.png" alt="Brand 5" />
+      </div>
+      <div class="grid-item wide2">
+        <img class="nar" src="../assets/images/nar.jpg" alt="Brand 6" />
+      </div>
+    </section>
+
+    <section class="top-deals">
+      <h2>Top Deals</h2>
+
+      <div class="swiper top-deals-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product4.png" alt="" />
+              <div class="product-info">
+                <h3>Deal 1</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Deal 1"
+                  data-price="15000.00"
+                  data-image="../assets/images/product4.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">Rs.15000.00</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product5.png" alt="" />
+              <div class="product-info">
+                <h3>Deal 2</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Deal 2"
+                  data-price="Rs.15000.00"
+                  data-image="../assets/images/product5.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product6.png" alt="" />
+              <div class="product-info">
+                <h3>Deal 3</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Deal 3"
+                  data-price="154"
+                  data-image="../assets/images/product6.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product6.png" alt="" />
+              <div class="product-info">
+                <h3>Deal 3</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Deal 3"
+                  data-price="154"
+                  data-image="../assets/images/product6.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <img src="../assets/images/product6.png" alt="" />
+              <div class="product-info">
+                <h3>Deal 3</h3>
+                <button
+                  class="add-to-cart"
+                  data-name="Deal 3"
+                  data-price="154"
+                  data-image="../assets/images/product6.png"
+                >
+                  +
+                </button>
+              </div>
+              <p class="price">154$</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="deals-next swiper-button-next"></div>
+          <div class="deals-prev swiper-button-prev"></div> -->
+        <div class="deals-pagination swiper-pagination"></div>
+      </div>
+
+      <button class="view-all-btn">View All</button>
+    </section>
+
+    <section class="landscape">
+      <div class="swiper landscape-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../assets/images/bnr.jpg" alt="Landscape Image 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/bnr2.jpg" alt="Landscape Image 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/images/bnr3.jpg" alt="Landscape Image 3" />
+          </div>
+        </div>
+
+        <!-- Optional navigation buttons -->
+        <!-- <div class="landscape-next swiper-button-next"></div>
+        <div class="landscape-prev swiper-button-prev"></div> -->
+
+        <!-- Optional pagination dots -->
+        <!-- <div class="landscape-pagination swiper-pagination"></div> -->
+      </div>
+    </section>
+
+    <footer class="ftr">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <ul class="links">
+            <li><a href="products.html">Men</a></li>
+            <li><a href="products.html">Women</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="home.html">Best Selling</a></li>
+            <li><a href="home.html">Top Deals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Shipping Policy</a></li>
+            <li><a href="contact.html">Refund Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>NEWSLETTER SIGN UP</h4>
+          <p class="news">
+            Sign up for exclusive updates, new arrivals & insider only
+            discounts.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025, Perfumes Mists. All rights reserved.</p>
+    </footer>
+
+    <div class="bottom-tab">
+      <a href="home.html" class="tab-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="tab-item">
+        <i class="fa-solid fa-store"></i>
+        <span>Shop</span>
+      </a>
+      <a href="sale.html" class="tab-item">
+        <i class="fa-solid fa-tags"></i>
+        <span>Sale</span>
+      </a>
+      <label id="cart-toggle" class="tab-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+      </label>
+    </div>
+
+    <div class="floating_btn">
+      <a target="_blank" href="https://web.whatsapp.com/">
+        <p class="text_icon">Talk to us?</p>
+        <div class="contact_icon">
+          <i class="fa-brands fa-whatsapp my-float"></i>
+        </div>
+      </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/hamburger.js"></script>
+  </body>
+</html>

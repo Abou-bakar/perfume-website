@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+      <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Mobile Menu Sidebar -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-header"></div>
+
+        <!-- Accordion Item 1: Men -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Men
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#men-tshirts">Perfumes</a>
+            <a href="#men-jeans">Perfume Oils</a>
+            <a href="#men-shirts">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Women -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Women
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#women-dresses">Perfumes</a>
+            <a href="#women-tops">Mists</a>
+            <a href="#women-jeans">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Sale -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Sale
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#sale-men">Men's Sale</a>
+            <a href="#sale-women">Women's Sale</a>
+            <a href="#sale-clearance">Clearance</a>
+            <a href="#sale-new">New Arrivals</a>
+          </div>
+        </div>
+        <!-- Accordion Item 4: Contact -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Contact
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="help_text">Need help?</p>
+            <div class="cont_info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+923331234567</p>
+            </div>
+            <div class="cont_info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@perfumesmists.pk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar_ftr">
+          <h4>Perfumes Mists</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-left">
+        <ul>
+          <li><a href="products.html">Men</a></li>
+          <li><a href="products.html">Women</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-center">
+        <a class="logo-link" href="home.html" aria-label="Go to home">
+          <span class="logo">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1>
+              Perfumes<br />
+              Mists
+            </h1>
+          </span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="cart-subtotal">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Overlay (for background dim) -->
+      <div id="cart-overlay" class="cart-overlay"></div>
+
+      <label for="menu-toggle" class="nav-overlay"></label>
+    </nav>
+
+    <section class="contact-container">
+      <div class="content">
+        <h1>CONTACT US</h1>
+        <br />
+        <br />
+        <p class="intro-text">
+          Thank you for your interest in Afnan Perfumes! We’re excited to hear
+          from you. Please use the form below to get in touch with us. Whether
+          you’re looking to become a distributor, explore job opportunities,
+          collaborate with us as an influencer, or have questions about online
+          orders, we’re eager to connect.
+        </p>
+        <div class="form-container">
+          <form action="" class="frm">
+            <div class="two-column-section">
+              <div class="field">
+                <label class="label" for="business-area">Business Area *</label>
+                <select
+                  class="select"
+                  id="business-area"
+                  name="business-area"
+                  required
+                >
+                  <option value="dept-1">Sales & Distribution</option>
+                  <option value="dept-2">Marketing & Partnerships</option>
+                  <option value="dept-3">Customer Service</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="label" for="request-type"
+                  >Type of Request *</label
+                >
+                <select
+                  class="select"
+                  id="request-type"
+                  name="request-type"
+                  required
+                >
+                  <option value="product-inquiry">Product Inquiry</option>
+                  <option value="purchase-request">Purchase Request</option>
+                  <option value="general-inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="label" for="title">Title *</label>
+                <select class="select" id="title" name="title" required>
+                  <option value="mr">Mr</option>
+                  <option value="ms">Ms</option>
+                  <option value="ms">Mrs</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label class="label" for="name">Name *</label>
+                <input
+                  class="input"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label class="label" for="email">Email *</label>
+                <input
+                  class="input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label class="label" for="country">Country *</label>
+                <input
+                  class="input"
+                  id="country"
+                  name="country"
+                  placeholder="Your country"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label class="label" for="country">City *</label>
+                <input
+                  class="input"
+                  id="country"
+                  name="country"
+                  placeholder="Your city"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label class="label" for="phone-number">Phone Number</label>
+                <input
+                  class="input"
+                  id="phone-number"
+                  name="phone-number"
+                  placeholder="+1 234 567 8900"
+                />
+              </div>
+            </div>
+
+            <div class="field col-span-full">
+              <label class="label" for="message">Your Message *</label>
+              <textarea
+                class="textarea"
+                id="message"
+                name="message"
+                placeholder="Tell us more about your inquiry..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="checkbox-field col-span-full">
+              <div class="checkbox-wrapper">
+                <input
+                  aria-describedby="dpa-consent-description"
+                  class="checkbox"
+                  id="dpa-consent"
+                  name="dpa-consent"
+                  required
+                  type="checkbox"
+                  value="consent"
+                />
+              </div>
+              <div>
+                <label class="label" for="dpa-consent">
+                  Declaration of consent for data processing *
+                </label>
+                <p class="description" id="dpa-consent-description">
+                  You agree that your data from the form will be collected and
+                  processed to answer your request. You can revoke your consent
+                  at any time for the future by e-mail to info@perfumes.com.
+                  Detailed information on the handling of user data can be found
+                  in our data protection declaration.
+                </p>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button class="button" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+     <footer class="ftr">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <ul class="links">
+            <li><a href="products.html">Men</a></li>
+            <li><a href="products.html">Women</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="home.html">Best Selling</a></li>
+            <li><a href="home.html">Top Deals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Shipping Policy</a></li>
+            <li><a href="contact.html">Refund Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>NEWSLETTER SIGN UP</h4>
+          <p class="news">
+            Sign up for exclusive updates, new arrivals & insider only
+            discounts.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025, Perfumes Mists. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

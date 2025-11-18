@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/product-detail.css" />
+    <link rel="stylesheet" href="../assets/css/products.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Mobile Menu Sidebar -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-header"></div>
+
+        <!-- Accordion Item 1: Men -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Men
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#men-tshirts">Perfumes</a>
+            <a href="#men-jeans">Perfume Oils</a>
+            <a href="#men-shirts">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Women -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Women
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#women-dresses">Perfumes</a>
+            <a href="#women-tops">Mists</a>
+            <a href="#women-jeans">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Sale -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Sale
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#sale-men">Men's Sale</a>
+            <a href="#sale-women">Women's Sale</a>
+            <a href="#sale-clearance">Clearance</a>
+            <a href="#sale-new">New Arrivals</a>
+          </div>
+        </div>
+        <!-- Accordion Item 4: Contact -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Contact
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="help_text">Need help?</p>
+            <div class="cont_info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+923331234567</p>
+            </div>
+            <div class="cont_info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@perfumesmists.pk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar_ftr">
+          <h4>Perfumes Mists</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-left">
+        <ul>
+          <li><a href="products.html">Men</a></li>
+          <li><a href="products.html">Women</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-center">
+        <a class="logo-link" href="home.html" aria-label="Go to home">
+          <span class="logo">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1>
+              Perfumes<br />
+              Mists
+            </h1>
+          </span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="cart-subtotal">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Overlay (for background dim) -->
+      <div id="cart-overlay" class="cart-overlay"></div>
+
+      <label for="menu-toggle" class="nav-overlay"></label>
+    </nav>
+
+    <section class="product-container">
+      <div class="product-controls">
+        <div class="filter-bar">
+          <label for="filter">Filter by:</label>
+          <select name="category" id="category">
+            <option value="">All Categories</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+
+          <!-- <select name="price" id="price">
+                    <option value="">All Prices</option>
+                    <option value="men"></option>
+                    <option value="women">Women</option>
+                    <option value="sale">Sale</option>
+                </select> -->
+        </div>
+
+        <div class="sort-bar">
+          <label for="sort">Sort by:</label>
+          <select name="sort" id="sort">
+            <option value="">Default</option>
+            <option value="men">Price: Low to High</option>
+            <option value="women">Price: High to Low</option>
+            <option value="sale">Sale</option>
+            <option value="best-selling">Best Selling</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../assets/images/product1.png" alt="" />
+          <div class="product-info">
+            <h3>Mint - 500ml</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/product2.png" alt="" />
+          <div class="product-info">
+            <h3>Pink Floral - 500ml</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/product3.png" alt="" />
+          <div class="product-info">
+            <h3>Paradox - 500ml</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/product4.png" alt="" />
+          <div class="product-info">
+            <h3>Coco - 500ml</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/product5.png" alt="" />
+          <div class="product-info">
+            <h3>Amouage - 500ml</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/product6.png" alt="" />
+          <div class="product-info">
+            <h3>Coco Noir - 500ml</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="https://lattafapakistan.com/cdn/shop/files/Teriaq-Intense-61522983.png?v=1753977612" alt="" />
+          <div class="product-info">
+            <h3>Teriaq Intense</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+        <div class="product-card">
+          <img src="https://lattafapakistan.com/cdn/shop/files/Ameer-Al-Oudh-Intense-61477394.png?v=1753974236" alt="" />
+          <div class="product-info">
+            <h3>Ameer Al Oudh</h3>
+            <button class="add-to-cart">+</button>
+          </div>
+          <p class="price">154$</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftr">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <ul class="links">
+            <li><a href="products.html">Men</a></li>
+            <li><a href="products.html">Women</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="home.html">Best Selling</a></li>
+            <li><a href="home.html">Top Deals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Shipping Policy</a></li>
+            <li><a href="contact.html">Refund Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>NEWSLETTER SIGN UP</h4>
+          <p class="news">
+            Sign up for exclusive updates, new arrivals & insider only
+            discounts.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025, Perfumes Mists. All rights reserved.</p>
+    </footer>
+     <div class="bottom-tab">
+      <a href="home.html" class="tab-item">
+         <i class="fa-solid fa-house"></i>
+         <span>Home</span>
+      </a>
+      <a href="products.html" class="tab-item">
+          <i class="fa-solid fa-store"></i>
+         <span>Shop</span>
+      </a>
+      <a href="sale.html" class="tab-item">
+         <i class="fa-solid fa-tags"></i>
+         <span>Sale</span>
+      </a>
+      <label id="cart-toggle" class="tab-item">
+         <i class="fa-solid fa-cart-shopping"></i>
+         <span>Cart</span>
+      </label>
+    </div>
+    <script src="../assets/js/cart.js"></script>
+  </body>
+</html>

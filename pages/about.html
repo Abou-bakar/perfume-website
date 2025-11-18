@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT US</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Mobile Menu Sidebar -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-header"></div>
+
+        <!-- Accordion Item 1: Men -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Men
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#men-tshirts">Perfumes</a>
+            <a href="#men-jeans">Perfume Oils</a>
+            <a href="#men-shirts">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Women -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Women
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#women-dresses">Perfumes</a>
+            <a href="#women-tops">Mists</a>
+            <a href="#women-jeans">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Sale -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Sale
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#sale-men">Men's Sale</a>
+            <a href="#sale-women">Women's Sale</a>
+            <a href="#sale-clearance">Clearance</a>
+            <a href="#sale-new">New Arrivals</a>
+          </div>
+        </div>
+        <!-- Accordion Item 4: Contact -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Contact
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="help_text">Need help?</p>
+            <div class="cont_info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+923331234567</p>
+            </div>
+            <div class="cont_info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@perfumesmists.pk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar_ftr">
+          <h4>Perfumes Mists</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-left">
+        <ul>
+          <li><a href="products.html">Men</a></li>
+          <li><a href="products.html">Women</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-center">
+        <a class="logo-link" href="home.html" aria-label="Go to home">
+          <span class="logo">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1>
+              Perfumes<br />
+              Mists
+            </h1>
+          </span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="cart-subtotal">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Overlay (for background dim) -->
+      <div id="cart-overlay" class="cart-overlay"></div>
+
+      <label for="menu-toggle" class="nav-overlay"></label>
+    </nav>
+
+    <h1 class="header">ABOUT US</h1>
+
+    <section class="abt">
+      <div class="about-image">
+        <img src="../assets/images/about.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="about-desc">
+      <div class="about-para">
+        <h4>
+          Since its inception in 2007, Perfumes has perfected its product
+          portfolio as a perfume house, and its fragrances are now present in
+          over 120 countries across the GCC region, Europe, Australia, USA,
+          Africa and Russia and more.
+        </h4>
+        <p>
+          <br />
+          AFNAN is a brand that has showcased that it is more than just
+          perfumes: it is design, experience, expertise.
+          <br />
+          <br />
+          AFNAN has provided essential memories for local and international
+          markets, bringing to life key experiences through each design.
+          <br />
+          <br />
+          Our designs reflect the unique and crafted experience our scents and
+          packaging offer to the market as well as our heritage and unique
+          quality.
+          <br />
+          <br />
+          We are inspired and motivated by an organic love for the perfume
+          industry, as well as for a love of caring for the end user. From the
+          ingredient's design up to the bottle's feel, AFNAN markets to a
+          sophisticated yet youthful generation with multicultural consumers.
+          <br />
+          <br />
+          Over the years, AFNAN has built a generation of perfume expertise
+          through a brand driven by an explorer spirit, finding new collections,
+          directions and experiences to share with the market. brings years of
+          perfume expertise, providing exclusive memories to buyers.
+          <br />
+          <br />
+          According to <strong>Imran Fazlani,</strong> Founder and Managing
+          Director of Afnan Perfumes, the UAE possesses a market that is very
+          central and developed in a way that helps Afnan Perfumes' suppliers
+          and customers meet and explore business opportunities.
+          <br />
+          <br />
+          Being the nose of the business, Imran Fazlani has created a trade that
+          can challenge the market by building unique, detailed, crafted
+          fragrances that inspire experiences through product quality and
+          design.
+          <br />
+          <br />
+          Building his product portfolio with an intention to share a connection
+          to different life experiences, Mr.Fazlani also helps develop the
+          curiosity and desire of consumers looking for an exotic feel of mixed
+          ethnics in the UAE.
+          <br />
+          <br />
+          Succeeding in his goal to build a unique perfume house, Mr.Fazlani,
+          with his 20 years of expertise, has established a one-of-a-kind scent
+          organization through organic growth, driven by life knowledge and
+          independent motivation. These elements have inspired every collection,
+          all produced with conviction and direction.
+        </p>
+      </div>
+    </section>
+
+    <footer class="ftr">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <ul class="links">
+            <li><a href="products.html">Men</a></li>
+            <li><a href="products.html">Women</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="home.html">Best Selling</a></li>
+            <li><a href="home.html">Top Deals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Shipping Policy</a></li>
+            <li><a href="contact.html">Refund Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>NEWSLETTER SIGN UP</h4>
+          <p class="news">
+            Sign up for exclusive updates, new arrivals & insider only
+            discounts.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025, Perfumes Mists. All rights reserved.</p>
+    </footer>
+    <script src="../assets/js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/checkout.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/cart.css" /> -->
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <nav class="checkout-nav">
+      <a href="home.html" aria-label="Go to home"><h2>Perfumes Mists</h2></a>
+      <i class="fa-solid fa-bag-shopping"></i>
+    </nav>
+    <div class="checkout-wrapper">
+      <div class="checkout-left">
+        <section class="checkout-section">
+          <h3>Contact</h3>
+          <input type="text" placeholder="Email or phone number" />
+        </section>
+
+        <section class="checkout-section">
+          <h3>Delivery</h3>
+          <div class="name">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+          </div>
+          <input type="text" placeholder="Address" />
+          <div class="citycode">
+            <input type="text" placeholder="City" />
+            <input type="text" placeholder="Postal Code" />
+          </div>
+          <input type="text" placeholder="Phone(optional)" />
+        </section>
+
+        <section class="checkout-section">
+          <h3>Shipping Method</h3>
+          <div class="accordion-shipping">
+            <label>
+              <input type="radio" name="shipping" checked />
+              <span>Standard $5</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="checkout-section accordion">
+          <h3>Payment</h3>
+          <div class="accordion-item-checkout">
+            <label class="accordion-header-checkout">
+              <input type="radio" name="payment" value="cod" checked />
+              <span>Cash on Delivery (COD)</span>
+            </label>
+            <div class="accordion-content-checkout">
+              <p>You can pay in cash when your order arrives.</p>
+              <br />
+              <p><strong>Estimated Delivery:</strong> 3–5 working days.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item-checkout">
+            <label class="accordion-header-checkout">
+              <input type="radio" name="payment" value="bank" />
+              <span>Bank Deposit</span>
+            </label>
+            <div class="accordion-content-checkout">
+              <p>
+                Transfer the amount to our bank account and upload payment
+                proof.
+              </p>
+              <br />
+              <br />
+              <ul>
+                <li><strong>Bank:</strong>Meezan Bank</li>
+                <br />
+                <br />
+                <li><strong>Account Title:</strong>XYZ</li>
+                <br />
+                <br />
+                <li><strong>Account No:</strong> 1234567890</li>
+                <br />
+                <br />
+                <li><strong>IBAN:</strong> PK12MEZN1234567890</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout-section accordion">
+          <h3>Billing Address</h3>
+          <div class="accordion-item-checkout non-expandable">
+            <label class="accordion-header-checkout">
+              <input type="radio" name="billing" value="same" checked />
+              <span>Same as shipping address</span>
+            </label>
+          </div>
+
+          <div class="accordion-item-checkout">
+            <label class="accordion-header-checkout">
+              <input type="radio" name="billing" value="different" />
+              <span>Use a different billing address</span>
+            </label>
+            <div class="accordion-content-checkout">
+              <form class="billing-form">
+                <div class="name">
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+                <input type="text" placeholder="Address" />
+                <div class="citycode">
+                  <input type="text" placeholder="City" />
+                  <input type="text" placeholder="Postal Code" />
+                </div>
+                <input type="text" placeholder="Phone(optional)" />
+              </form>
+            </div>
+          </div>
+        </section>
+        <a href="order-confirmation.html"
+          ><button class="complete-order">Complete Order</button></a
+        >
+      </div>
+
+      <div class="checkout-right">
+        <div class="order-items" id="order-items"></div>
+
+        <div class="order-summary">
+          <p>Subtotal: $<span id="summary-subtotal">0</span></p>
+          <p>Shipping: $<span id="summary-shipping">0</span></p>
+          <p>Total: $<span id="summary-total">0</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/checkout.js"></script>
+  </body>
+</html>

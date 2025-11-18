@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/faq.css" />
+    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+     <nav>
+       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <label for="menu-toggle" class="mobile-menu-close">
+      <i class="fa-solid fa-xmark"></i>
+      </label>
+
+      <div class="nav-left">
+        <ul>
+          <li><a href="products.html">Men</a></li>
+          <li><a href="products.html">Women</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-center">
+        <a class="logo-link" href="home.html" aria-label="Go to home">
+          <span class="logo">
+            <img src="../assets/images/logo.png" alt="" />
+            <h1>
+              Perfumes<br />
+              Mists
+            </h1>
+          </span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+        <span id="cart-count">0</span>
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div class="cart-container" id="cart-container">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="cart-subtotal">0</span></p>
+          <button id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <!-- Overlay (for background dim) -->
+      <div id="cart-overlay" class="cart-overlay"></div>
+
+     <label for="menu-toggle" class="nav-overlay"></label>
+    </nav>
+
+    <section class="faqs">
+      <div class="container">
+        <h1>FAQ</h1>
+
+        <div class="faq-item">
+          <button class="question">
+            Do you have any physical outlets?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              Yes, we have two physical outlets in Karachi where you can explore
+              our products in person. Feel free to visit us for an in-store
+              experience, test your favorite fragrances, and get personalized
+              assistance from our staff.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            Will you accept returns on my products?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              Absolutely. We will accept returns on products you have purchased
+              from shop.alharamainperfumes.com, as long as all the conditions
+              outlined in our Return Policy are met.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            When will you deliver my order?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              Here’s what you can expect: <br />
+              <strong>Karachi:</strong> 2-5 business days <br />
+              <strong>Other cities:</strong> 3–7 business days <br />
+              During peak sale periods, delivery may take longer.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            Where do you deliver?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              Delivery is available in all the Emirates of the UAE. Shipping to
+              international destinations is also available. To find out if we
+              can deliver to your country, please send us your details through
+              our contact page and we will respond as quickly as possible.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            How long does it take to receive my order?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              The delivery promise for our major destinations in the United Arab
+              Emirates is 24hrs.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            My order has been shipped, what next?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              You can track your order through your account. If you do not see
+              full updates, you can contact us via phone, email, or through our
+              contact us form.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            I’ve been waiting longer than your delivery promised, what should I
+            do?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              Contact us immediately via phone, email, or through our contact us
+              form, so that one of our friendly customer service team will
+              assist you.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            I do not want to receive my order, what should I do?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              As stated in our Return Policy, you can cancel your order at any
+              time before the order has been shipped from our warehouse and a
+              dispatch confirmation is sent. If you wish to cancel your order
+              and the goods have been shipped, you will have to return the
+              product, and the provisions of the Return Policy will apply.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            What if the item I received is damaged on delivery?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              At Al Haramain Perfumes, we always take extra care in packaging
+              your items. However, in case the item you received was damaged,
+              please inform us immediately. We will advise you of further action
+              you should take.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            Can I pay with cash on delivery?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              You can pay with cash on delivery if you are ordering the goods
+              within the UAE and your shipping destination is within the UAE.
+              For orders to be shipped outside the UAE are not eligible for cash
+              on delivery method.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            Can I track my order?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              You can see the exact status of each item in your order from your
+              order details page. Click the "Order Details" button on your
+              orders page for more information.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="question">
+            Can I cancel orders that have already shipped?
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="answer">
+            <p>
+              You can cancel your order until we have prepared the items
+              therefore orders cannot be cancelled after they are prepared for
+              shipment. In the case of returning an order, the shipping fees (if
+              any) cannot be refunded.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../assets/js/faq.js"></script>
+    <script src="../assets/js/cart.js"></script>
+  </body>
+</html>
