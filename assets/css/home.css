@@ -1,15 +1,24 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Roboto";
-  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background: #f5f5f5 !important;
 }
 
-p, li {
-  font-family: "Roboto";
+p,
+li {
+  font-family: "Roboto", sans-serif;
 }
 
 button,
@@ -20,7 +29,10 @@ span {
   font-family: "Poppins", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Poppins", sans-serif;
 }
 
@@ -83,7 +95,6 @@ nav > * {
 
 .nav-center h1 {
   font-size: 22px;
-  font-weight: 600;
   color: black;
   margin: 0;
 }
@@ -134,11 +145,13 @@ nav > * {
 .hero-swiper {
   width: 100%;
   height: 100vh;
+  max-height: 600px;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-swiper .swiper-wrapper {
-  display: flex;
+  /* display: flex; */
   width: 100%;
   height: 100%;
 }
@@ -147,12 +160,12 @@ nav > * {
   width: 100% !important;
   height: 100%;
   flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--bg);
-  overflow: hidden;
-  position: relative;
 }
 
 .slide-container {
@@ -449,7 +462,7 @@ nav > * {
   font-weight: 600;
 }
 
-.product-card button {
+.add-to-cart {
   background: black;
   color: #fff;
   border: none;
@@ -462,7 +475,7 @@ nav > * {
   transition: all 0.3s ease;
 }
 
-.product-card button:hover {
+.add-to-cart:hover {
   background: white;
   color: black;
 }
@@ -482,8 +495,7 @@ nav > * {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   padding: 60px 20px;
 }
@@ -492,6 +504,7 @@ nav > * {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
+   aspect-ratio: 1 / 1;
 }
 
 .grid-item img {
@@ -506,15 +519,15 @@ nav > * {
 }
 
 .grid-item.wide {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 .grid-item.wide2 {
-  grid-column: span 3;
+  grid-column: span 1;
 }
 
 .grid-item.tall {
-  grid-row: span 2;
+  grid-row: span 1;
 }
 
 .grid-item {
@@ -522,7 +535,7 @@ nav > * {
 }
 
 .top-deals {
-  padding: 80px 30px;
+  padding: 80px 15px;
   background-color: #f7f7f7;
   text-align: left;
   overflow: hidden;
@@ -609,21 +622,28 @@ nav > * {
 }
 
 .landscape .swiper {
-  width: 1155px;
+  width: 100%;
+  max-width: 1155px;
   height: auto;
+  /* padding: 0 20px; */
+  margin: 0 auto;
+  overflow: hidden; 
 }
 
 .landscape .swiper-wrapper {
-  margin: 0 0;
-  padding: 0 0; /* remove margins */
+  width: 100%;
+}
+
+.landscape .swiper-slide {
+   width: 100% !important; /* only this */
 }
 
 .landscape img {
-  width: 1155px;
-  height: 540px;
+  width: 100%;
+  height: auto;
   border-radius: 16px;
   object-fit: cover;
-  /* display: block; */
+  display: block;
 }
 
 .landscape .swiper-button-next,
@@ -647,11 +667,17 @@ nav > * {
   background: #000;
   color: #fff;
   width: 100%;
+  max-width: 100vw;
   border-radius: 0;
   padding: 50px 0;
+  overflow-x: hidden;
+  vertical-align: top;
 }
 
 .footer-row {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   /* gap: 40px; */
@@ -759,10 +785,6 @@ nav > * {
   text-align: center;
   justify-content: center;
   margin-bottom: 20px;
-}
-
-.bottom-tab {
-  display: none;
 }
 
 .floating_btn {

@@ -29,16 +29,89 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
 </head>
 <body>
-     <nav>
-       <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">
+     <div class="banner">
+      <p>FREE SHIPPING ON ORDERS ABOVE RS. 5000</p>
+    </div>
+
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </label>
-      <label for="menu-toggle" class="mobile-menu-close">
-      <i class="fa-solid fa-xmark"></i>
-      </label>
+
+      <!-- Mobile Menu Sidebar -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-header"></div>
+
+        <!-- Accordion Item 1: Men -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Men
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#men-tshirts">Perfumes</a>
+            <a href="#men-jeans">Perfume Oils</a>
+            <a href="#men-shirts">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2: Women -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Women
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#women-dresses">Perfumes</a>
+            <a href="#women-tops">Mists</a>
+            <a href="#women-jeans">Deodorants</a>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3: Sale -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Sale
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <a href="#sale-men">Men's Sale</a>
+            <a href="#sale-women">Women's Sale</a>
+            <a href="#sale-clearance">Clearance</a>
+            <a href="#sale-new">New Arrivals</a>
+          </div>
+        </div>
+        <!-- Accordion Item 4: Contact -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            Contact
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="help_text">Need help?</p>
+            <div class="cont_info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+923331234567</p>
+            </div>
+            <div class="cont_info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@perfumesmists.pk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_bar_ftr">
+          <h4>Perfumes Mists</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
 
       <div class="nav-left">
         <ul>
@@ -62,7 +135,7 @@
       <div class="nav-right">
         <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
         <span id="cart-count">0</span>
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
       </div>
 
       <!-- Cart Sidebar -->
@@ -82,7 +155,7 @@
       <!-- Overlay (for background dim) -->
       <div id="cart-overlay" class="cart-overlay"></div>
 
-     <label for="menu-toggle" class="nav-overlay"></label>
+      <label for="menu-toggle" class="nav-overlay"></label>
     </nav>
 
     <section class="error-container">
@@ -91,6 +164,24 @@
             <a href="home.html"><button class="home-btn">HOME PAGE</button></a>
         </div>
     </section>
+    <div class="bottom-tab">
+      <a href="home.html" class="tab-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="tab-item">
+        <i class="fa-solid fa-store"></i>
+        <span>Shop</span>
+      </a>
+      <a href="sale.html" class="tab-item">
+        <i class="fa-solid fa-tags"></i>
+        <span>Sale</span>
+      </a>
+      <label id="cart-toggle" class="tab-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+      </label>
+    </div>
      <script src="../assets/js/cart.js"></script>
 </body>
 </html>

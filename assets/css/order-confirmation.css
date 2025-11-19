@@ -142,7 +142,7 @@ nav a {
   }
 
   .order-section-price {
-    width: 90%;
+    width: 100%;
   }
 
   .order-section-orderno {
@@ -154,7 +154,7 @@ nav a {
   }
 
   .order-section-map p {
-    padding-left: 10px;
+    padding: 10px;
   }
 
   .order-right {

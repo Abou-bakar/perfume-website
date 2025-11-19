@@ -70,7 +70,6 @@
 
 .product-detail .product-info h3 {
   font-size: 1.2rem;
-  font-weight: 100;
   margin-bottom: 20px;
 }
 
@@ -221,7 +220,7 @@
   margin: 0;
 }
 
-.add-to-cart {
+.add-to-cart-detail {
   background-color: black;
   color: white;
   font-size: 12px;
@@ -232,7 +231,7 @@
   transition: background 0.3s ease;
 }
 
-.add-to-cart:hover {
+.add-to-cart-detail:hover {
   background-color: white;
   color: black;
 }

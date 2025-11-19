@@ -44,6 +44,8 @@ const topDealsSwiper = new Swiper(".top-deals-swiper", {
     1024: { slidesPerView: 4 },
     1280: { slidesPerView: 4 },
     1440: { slidesPerView: 4 },
+    1920: { slidesPerView: 5 },
+    2560: { slidesPerView: 6 },
   },
 });
 
@@ -71,6 +73,8 @@ const topSellersSwiper = new Swiper(".top-sellers-swiper", {
     1024: { slidesPerView: 4 },
     1280: { slidesPerView: 4 },
     1440: { slidesPerView: 4 },
+    1920: { slidesPerView: 5 },
+    2560: { slidesPerView: 6 },
   },
 });
 
@@ -78,6 +82,8 @@ const topSellersSwiper = new Swiper(".top-sellers-swiper", {
 
 const landscapeSwiper = new Swiper(".landscape-swiper", {
   slidesPerView: 1,
+  spaceBetween: 0,
+   centeredSlides: false,
   loop: true,
   speed: 800,
   // autoplay: {
