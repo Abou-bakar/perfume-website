@@ -5,7 +5,7 @@ const questions = document.querySelectorAll(".question");
 
 questions.forEach((q) => {
   q.addEventListener("click", () => {
-    q.classList.toggle("active");
+    // q.classList.toggle("active");
     const answer = q.nextElementSibling;
     const icon = q.querySelector("i");
     const isOpen = answer.classList.contains("open");

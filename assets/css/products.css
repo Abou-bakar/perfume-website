@@ -1,5 +1,9 @@
 .product-container {
-  width: 90%;
+  width: 100%;
+  max-width: 2000px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
   margin: 90px auto;
 }
 
@@ -32,5 +36,5 @@ select {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 30px;
 }

@@ -62,7 +62,7 @@
 }
 
 .question.active + .answer {
-  max-height: 500px;
+  /* max-height: 500px; */
   padding: 20px;
 }
 

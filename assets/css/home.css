@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 html {
@@ -46,6 +46,10 @@ h4 {
   justify-content: center;
 }
 
+.banner p {
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
 nav {
   background-color: white;
   display: flex;
@@ -58,9 +62,9 @@ nav {
   z-index: 9;
 }
 
-nav > * {
+/* nav > * {
   flex: 1;
-}
+} */
 
 .nav-left {
   display: flex;
@@ -145,7 +149,7 @@ nav > * {
 .hero-swiper {
   width: 100%;
   height: 100vh;
-  max-height: 600px;
+  max-height: 650px;
   overflow: hidden;
   position: relative;
 }
@@ -189,6 +193,7 @@ nav > * {
   position: relative;
   width: 100%;
   max-width: 1400px;
+  margin: 50px auto;
   z-index: 1;
 }
 
@@ -240,7 +245,7 @@ nav > * {
   gap: 40px;
   width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
   justify-items: center;
   align-items: center;
   text-align: center;
@@ -249,7 +254,7 @@ nav > * {
 }
 
 .hero-content2 span {
-  font-size: clamp(60px, 8vw, 180px);
+  font-size: clamp(40px, 8vw, 100px);
   font-weight: 400;
   letter-spacing: 10px;
   color: #fff;
@@ -296,8 +301,8 @@ nav > * {
   grid-template-rows: repeat(4, auto);
   gap: 30px;
   width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: 60px auto;
   justify-items: center;
   align-items: center;
   text-align: center;
@@ -305,8 +310,16 @@ nav > * {
   z-index: 1;
 }
 
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .hero-content3 span {
-  font-size: clamp(60px, 8vw, 200px);
+  font-size: clamp(40px, 8vw, 100px);
   font-weight: 400;
   letter-spacing: clamp(20px, 3vw, 55px);
   color: #fff;
@@ -420,7 +433,10 @@ nav > * {
 
 /* Individual Product Card */
 .product-card {
-  min-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   /* flex-shrink: 0; */
   cursor: pointer;
 }
@@ -442,24 +458,32 @@ nav > * {
   font-weight: 500;
   margin: 0;
   color: black;
-  flex: 1;
+ max-width: 140px;
   margin-bottom: 6px;
-  /* white-space: nowrap; */
+  word-break: break-word;
 }
 
 .product-info {
   display: flex;
+  justify-content: center;
   /* flex-direction: column; */
+  align-items: center;
+  width: 100%;
+  gap: 45px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  text-align: left;
-  /* width: 70%; */
-  gap: 15px;
+  gap: 6px;
 }
 
 .product-card .price {
-  font-size: 14px;
+  font-size: 16px;
   color: black;
   font-weight: 600;
+  margin: 0;
 }
 
 .add-to-cart {
@@ -467,8 +491,8 @@ nav > * {
   color: #fff;
   border: none;
   border: 2px solid black;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   padding: 8px 14px;
   border-radius: 100%;
   cursor: pointer;
@@ -504,7 +528,7 @@ nav > * {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-   aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;
 }
 
 .grid-item img {
@@ -574,6 +598,7 @@ nav > * {
 .deals-prev {
   color: #000;
 }
+
 .top-deals .swiper-pagination {
   position: relative;
   margin-top: 30px;
@@ -623,11 +648,11 @@ nav > * {
 
 .landscape .swiper {
   width: 100%;
-  max-width: 1155px;
+  /* max-width: 1155px; */
   height: auto;
   /* padding: 0 20px; */
-  margin: 0 auto;
-  overflow: hidden; 
+  margin: 0 30px;
+  overflow: hidden;
 }
 
 .landscape .swiper-wrapper {
@@ -635,7 +660,7 @@ nav > * {
 }
 
 .landscape .swiper-slide {
-   width: 100% !important; /* only this */
+  width: 100% !important;
 }
 
 .landscape img {
@@ -667,15 +692,14 @@ nav > * {
   background: #000;
   color: #fff;
   width: 100%;
-  max-width: 100vw;
+  /* max-width: 100vw; */
   border-radius: 0;
   padding: 50px 0;
   overflow-x: hidden;
-  vertical-align: top;
+  /* vertical-align: top; */
 }
 
 .footer-row {
-  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
   display: flex;
@@ -726,8 +750,7 @@ nav > * {
   border: none;
   padding-left: 15px;
   padding-right: 15px;
-  /* margin-top: 10px; */
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -759,7 +782,6 @@ nav > * {
 }
 
 .ftr p {
-  /* text-align: center; */
   margin-bottom: 10px;
   font-size: 12px;
 }

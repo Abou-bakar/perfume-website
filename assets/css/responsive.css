@@ -181,8 +181,6 @@
   display: none;
 }
 
-
-
 @media (max-width: 992px) {
   .hamburger {
     display: flex;
@@ -325,6 +323,7 @@
 
   .categories-mobile {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 20px 20px;
@@ -334,8 +333,8 @@
   .cat-image img {
     background: #ddd;
     object-fit: contain;
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
   }
 
@@ -346,9 +345,7 @@
   }
 
   .hero-swiper {
-    width: 100%;
-    height: 25vh;
-    overflow: hidden;
+    display: none;
   }
 
   .hero-content {
@@ -385,9 +382,9 @@
     margin: 0 25px;
   }
 
-  .product-card {
+  /* .product-card {
     position: relative;
-  }
+  } */
 
   .product-card img {
     width: 70%;
@@ -403,15 +400,15 @@
 
   .product-info {
     display: flex;
-    /* flex-direction: column; */
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    /* width: 70%; */
+    margin: 0 20px;
   }
 
   .product-card .price {
     font-size: 10px;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   .add-to-cart {
@@ -419,12 +416,12 @@
     color: #fff;
     position: absolute;
     top: 10px;
-    right: 40px;
+    right: 25px;
     border: none;
     border: 2px solid black;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 100%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -443,9 +440,9 @@
     width: 100%;
   }
 
-  /* .landscape .swiper {
-    width: 500px;
-  } */
+  .landscape .swiper {
+    margin: 0 0;
+  }
 
   .landscape img {
     border-radius: 0;
@@ -538,10 +535,6 @@
 /*about*/
 
 @media (max-width: 992px) {
-  .about-image img {
-    width: 650px;
-    height: 440px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -578,15 +571,15 @@
 }
 
 /*products*/
+@media (min-width: 1700px) {
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 
 @media (max-width: 992px) {
   .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .checkout-nav {
-    display: flex;
-    gap: 540px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -634,10 +627,10 @@
     font-size: 2rem;
   }
 
-  .checkout-nav {
+  /* .checkout-nav {
     display: flex;
     gap: 240px;
-  }
+  } */
 
   .checkout-nav h2 {
     font-size: 16px;

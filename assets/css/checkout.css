@@ -12,6 +12,10 @@
   text-decoration: none;
 }
 
+.checkout-nav h2 {
+   font-size: clamp(14px, 1.5vw, 18px);
+}
+
 .checkout-nav i {
   font-size: 30px;
   cursor: pointer;
