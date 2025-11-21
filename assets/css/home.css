@@ -187,18 +187,19 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 20px;
+  gap: clamp(10px, 2vw, 20px);
   justify-items: center;
   text-align: center;
   position: relative;
   width: 100%;
   max-width: 1400px;
-  margin: 50px auto;
+  margin: 0 auto;
+  /* padding: 40px; */
   z-index: 1;
 }
 
 .hero-content span {
-  font-size: clamp(40px, 8vw, 100px);
+  font-size: clamp(1.5rem, 5vw, 6rem);
   font-weight: 400;
   color: #fff;
   line-height: 100%;
@@ -207,7 +208,7 @@ nav {
 
 .leaves-image {
   position: absolute;
-  width: min(684px, 50vw);
+  width: clamp(250px, 40vw, 684px);
   height: auto;
   top: 5%;
   left: 50%;
@@ -219,11 +220,12 @@ nav {
 .leaves-image img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .mint-image {
   position: absolute;
-  width: min(230px, 20vw);
+  width: clamp(120px, 18vw, 300px);
   height: auto;
   top: 15%;
   left: 50%;
@@ -235,6 +237,7 @@ nav {
 .mint-image img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 /* SLIDE 2 - PINK FLORAL */
@@ -242,10 +245,10 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 40px;
+  gap: clamp(20px, 4vw, 40px);
   width: 80%;
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 0 auto;
   justify-items: center;
   align-items: center;
   text-align: center;
@@ -254,9 +257,9 @@ nav {
 }
 
 .hero-content2 span {
-  font-size: clamp(40px, 8vw, 100px);
+  font-size: clamp(2rem, 8vw, 6.25rem);
   font-weight: 400;
-  letter-spacing: 10px;
+  letter-spacing: clamp(5px, 1vw, 10px);
   color: #fff;
   line-height: 100%;
   user-select: none;
@@ -264,7 +267,7 @@ nav {
 
 .pink-leaves-image {
   position: absolute;
-  width: min(684px, 50vw);
+  width: clamp(300px, 50vw, 684px);
   height: auto;
   top: 5%;
   left: 50%;
@@ -276,11 +279,12 @@ nav {
 .pink-leaves-image img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .pink-image {
   position: absolute;
-  width: min(230px, 20vw);
+  width: clamp(150px, 20vw, 230px);
   height: auto;
   top: 15%;
   left: 50%;
@@ -292,6 +296,7 @@ nav {
 .pink-image img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 /* SLIDE 3 - PARADOX */
@@ -299,10 +304,10 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
-  gap: 30px;
+  gap: clamp(15px, 3vw, 30px);
   width: 90%;
   max-width: 1400px;
-  margin: 60px auto;
+  margin: 0 auto;
   justify-items: center;
   align-items: center;
   text-align: center;
@@ -316,12 +321,15 @@ nav {
   height: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content3 span {
-  font-size: clamp(40px, 8vw, 100px);
+  font-size: clamp(2rem, 8vw, 6.25rem);
   font-weight: 400;
-  letter-spacing: clamp(20px, 3vw, 55px);
+  letter-spacing: clamp(10px, 3vw, 55px);
   color: #fff;
   line-height: 100%;
   user-select: none;
@@ -332,7 +340,7 @@ nav {
 .brown-leaves-image3 {
   position: absolute;
   z-index: 2;
-  width: min(315px, 25vw);
+  width: clamp(150px, 25vw, 315px);
   pointer-events: none;
 }
 
@@ -344,12 +352,12 @@ nav {
 
 .brown-leaves-image2 {
   bottom: 15%;
-  left: 28%;
+  left: clamp(5%, 28%, 28%);
 }
 
 .brown-leaves-image3 {
   bottom: 5%;
-  right: 24%;
+  right: clamp(5%, 24%, 24%);
 }
 
 .brown-leaves-image1 img,
@@ -358,11 +366,12 @@ nav {
   width: 100%;
   height: auto;
   user-select: none;
+  display: block;
 }
 
 .brown-image {
   position: absolute;
-  width: min(450px, 35vw);
+  width: clamp(250px, 35vw, 450px);
   height: auto;
   top: 50%;
   left: 50%;
@@ -374,6 +383,7 @@ nav {
 .brown-image img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Swiper Navigation Buttons */
@@ -589,11 +599,6 @@ nav {
   justify-content: center;
 }
 
-.top-deals .product-card {
-  min-width: 200px;
-  /* flex-shrink: 0; */
-}
-
 .deals-next,
 .deals-prev {
   color: #000;
@@ -705,21 +710,20 @@ nav {
   display: flex;
   justify-content: space-between;
   /* gap: 40px; */
-  padding: 40px;
+  /* padding: 40px; */
   line-height: 2;
 }
 
-.footer-col h1 {
-  color: #fff;
-  font-size: 36px;
-  font-weight: 400;
-  /* margin-right: 154px; */
+.footer-col {
+  padding: 25px;
+  flex: 1;
 }
 
 .footer-col h4 {
   color: #fff;
   font-size: 18px;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .footer-col input {
@@ -775,6 +779,7 @@ nav {
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .links li a:hover {
@@ -788,7 +793,7 @@ nav {
 
 .icons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 20px;
 }
 
