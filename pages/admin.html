@@ -154,64 +154,180 @@
                     <td>#1001</td>
                     <td>2025-06-01</td>
                     <td>PKR 5,000</td>
-                    <td style="color: green;">Confirmed</td>
+                    <td><span class="status active">Confirmed</span></td>
                     <td><select name="Actions" id="">
                         <option value="" selected hidden>Actions</option>
                         <option value="">Order again</option>
                         <option value="">Order details</option>
-                        <option value="" style="color: red;">Cancel order</option>
+                        <option value="" style="color: #d62f2f;">Cancel order</option>
                     </select></td>
                 </tr>
                 <tr>
                     <td>#1002</td>
                     <td>2025-06-02</td>
                     <td>PKR 3,200</td>
-                    <td style="color: #faca15;">In Transit</td>
+                    <td><span class="status in-transit">In Transit</span></td>
                     <td><select name="Actions" id="">
                         <option value="" selected hidden>Actions</option>
                         <option value="">Order again</option>
                         <option value="">Order details</option>
-                        <option value="" style="color: red;">Cancel order</option>
+                        <option value="" style="color: #d62f2f;">Cancel order</option>
                     </select></td>
                 </tr>
                 <tr>
                     <td>#1003</td>
                     <td>2025-06-03</td>
                     <td>PKR 7,450</td>
-                    <td style="color: red;">Cancelled</td>
+                    <td><span class="status expired">Cancelled</span></td>
                     <td><select name="Actions" id="">
                         <option value="" selected hidden>Actions</option>
                         <option value="">Order again</option>
                         <option value="">Order details</option>
-                        <option value="" style="color: red;">Cancel order</option>
+                        <option value="" style="color: #d62f2f;">Cancel order</option>
                     </select></td>
                 </tr>
                 <tr>
                     <td>#1004</td>
                     <td>2025-06-04</td>
                     <td>PKR 2,300</td>
-                    <td style="color: green;">Confirmed</td>
+                    <td><span class="status active">Confirmed</span></td>
                     <td><select name="Actions" id="">
                         <option value="" selected hidden>Actions</option>
                         <option value="">Order again</option>
                         <option value="">Order details</option>
-                        <option value="" style="color: red;">Cancel order</option>
+                        <option value="" style="color: #d62f2f;">Cancel order</option>
                     </select></td>
                 </tr>
                 <tr>
                     <td>#1005</td>
                     <td>2025-06-05</td>
                     <td>PKR 6,750</td>
-                    <td style="color: #faca15;">In Transit</td>
+                    <td><span class="status in-transit">In Transit</span></td>
                     <td><select name="Actions" id="">
                         <option value="" selected hidden>Actions</option>
                         <option value="">Order again</option>
                         <option value="">Order details</option>
-                        <option value="" style="color: red;">Cancel order</option>
+                        <option value="" style="color: #d62f2f;">Cancel order</option>
                     </select></td>
                 </tr>
                 </table>
             </div>
+        </div>
+        <h1>Inventory</h1>
+        <div class="inventory-container">
+           <div class="inventory-searchbar-sort">
+                <div class="inventorysearchbar searchbar">
+                 <input type="text" name="" id="" placeholder="Search by Product SKU" />
+              <button class="search-btn">
+                <svg style="width: 24px; height: 30px" viewBox="0 0 24 24">
+                  <path
+                    fill="#666666"
+                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"
+                  />
+                </svg>
+              </button>
+              </div>
+              <div class="inventory-sort">
+                <select name="sort" id="sort">
+            <option value="">Perfumes</option>
+            <option value="men">Perfume Oils</option>
+            <option value="women">Mists</option>
+            <option value="sale">Deodorants</option>
+          </select>
+              </div>
+            </div>
+             <div class="inventory-table">
+                <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>SKU</th>
+                    <th>Location</th>
+                    <th>Stock Quantity</th>
+                    <th>Unit Cost</th>
+                    <th>Total Value</th>
+                </tr>
+                <tr>
+                    <td>Khamrah</td>
+                    <td>SKU001</td>
+                    <td>Warehouse 1</td>
+                    <td>200</td>
+                    <td>Rs.8000</td>
+                    <td>Rs.80000</td>
+                    </tr>
+                <tr>
+                    <td>Asad Bourbon</td>
+                    <td>SKU002</td>
+                    <td>Warehouse 1</td>
+                    <td>100</td>
+                    <td>Rs.10000</td>
+                    <td>Rs.100000</td>
+                    </tr>
+                <tr>
+                    <td>Ameer Al Oud</td>
+                    <td>SKU003</td>
+                    <td>Warehouse 2</td>
+                    <td style="color: #d62f2f;">10</td>
+                    <td>Rs.8000</td>
+                    <td>Rs.80000</td>
+                    </tr>
+                <tr>
+                    <td>Kingdom</td>
+                    <td>SKU004</td>
+                    <td>Warehouse 2</td>
+                    <td>200</td>
+                    <td>Rs.9000</td>
+                    <td>Rs.90000</td>
+                    </tr>
+                <tr>
+                    <td>Badee Al Oud</td>
+                    <td>SKU005</td>
+                    <td>Warehouse 1</td>
+                    <td style="color: #d62f2f;">Out of Stock</td>
+                    <td>Rs.12000</td>
+                    <td>Rs.120000</td>
+                    </tr>
+              </table>
+              </div>
+        </div>
+        <h1>Coupon Management</h1>
+        <div class="coupon-container">
+          <div class="coupon-table">
+            <table>
+              <tr>
+                <th>Code</th>
+                <th>Discount</th>
+                <th>Type</th>
+                <th>Start Date</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+              <tr>
+                <td>WINTER20</td>
+          <td>20%</td>
+          <td>Percentage</td>
+          <td>01 Nov 2025</td>
+          <td>31 Nov 2025</td>
+          <td><span class="status active">Active</span></td>
+          <td class="coupon-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+              </tr>
+              <tr>
+                 <td>FLAT500</td>
+          <td>Rs 500</td>
+          <td>Flat</td>
+          <td>05 Oct 2025</td>
+          <td>10 Oct 2025</td>
+          <td><span class="status expired">Expired</span></td>
+          <td class="coupon-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </td>
+              </tr>
+            </table>
+          </div>
         </div>
         <h1>Low Stock</h1>
         <div class="low-stock-container">
